@@ -1,17 +1,27 @@
 <article class="speakerslist jumbotron d-none d-sm-block">
     <div class="container">
         <div class="row">
-            <div class="col-md text-center">
-                <h4 class="speakerslist-title">Art in Full Bloom</h4>
-                <div class="speakerslist-name">with
-                    <a href="#">Lorenzo Garcia</a>
+
+            <% topSpeakers.forEach(function (speaker){ %>
+
+                <div class="col-md text-center">
+                    <h4 class="speakerslist-title">
+                        <%= speaker.title %>
+                    </h4>
+                    <div class="speakerslist-name">with
+                        <a href="./speakers/<%= speaker.shortname %>">
+                            <%= speaker.name %>
+                        </a>
+                    </div>
+                    <p class="speakerslist-info mt-2"> <a href="./speakers/<%= speaker.shortname %>">
+                            <img class="speakerslist-img rounded-circle"
+                                src="./images/speakers/<%= speaker.shortname %>_tn.jpg"
+                                alt="Photo of <% speaker.shortname %> Post">
+                        </a>
+                    </p>
                 </div>
-                <div class="speakerslist-info mt-2"> <a href="#">
-                        <img class="speakerslist-img rounded-circle" src="./images/speakers/Lorenzo_Garcia_tn.jpg"
-                            alt="Photo of Lorenzo Garcia">
-                    </a>
-                </div>
-            </div>
+
+                <% }) %>
         </div>
     </div>
 </article>
