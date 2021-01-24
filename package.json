@@ -8,7 +8,7 @@
     "dev": "nodemon --ignore feedback.json server.js"
   },
   "keywords": [],
-  "author": "Daniel Khan",
+  "author": "Yasitha Gamage",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^7.18.0",
